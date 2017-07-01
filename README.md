@@ -18,12 +18,21 @@ var app = express();
 
 app.get("/*", function (req, res) {
 
+    var static_host = '';
+    var useCache = false;
+    if (process.env.NODE_ENV === "production") {
+        static_host = 'http://cdn.ubibi.cn';
+        useCache = true;
+    }
+
+
     adjustHtmlUrl.doAdjust('/static/assets_spa/index.html', {
-        urlPrefix: 'http:/cdn.ubibi.cn',
-        useCache: true
+        urlPrefix: static_host,
+        useCache: useCache
     }).then(function (d) {
         res.send(d);
     });
+
 });
 ```
 
