@@ -60,7 +60,7 @@ app.get("/*", function (req, res) {
 </html>
 ```
 
-##output
+## output : online 
 ``` html
 <!DOCTYPE html>
 <html lang="en">
@@ -80,5 +80,29 @@ app.get("/*", function (req, res) {
 <script src="http:/cdn.ubibi.cn/static/lib/vue-router-2.6.0/dist/vue-router.min.js"></script>
 
 <script type="text/javascript" src="http:/cdn.ubibi.cn/static/app/client_spa.9dae58ed.js"></script></body>
+</html>
+```
+
+
+## output : development
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <title>Title</title>
+<link href="/static/app/client_spa.9dae58ed.css" rel="stylesheet"></head>
+<body>
+
+<div id="mainBody">
+    <router-view></router-view>
+</div>
+
+<script src="/static/lib/vue-2.3.0/vue.min.js"></script>
+<script src="/static/lib/vue-router-2.6.0/dist/vue-router.min.js"></script>
+
+<script type="text/javascript" src="/static/app/client_spa.9dae58ed.js"></script></body>
 </html>
 ```
