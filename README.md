@@ -1,6 +1,14 @@
 # adjust-html-url
 just for nodejs
 
+
+## install
+
+``` javascript
+    npm install --save adjust-html-url
+```
+
+
 ## node server.js
 
 ``` javascript
