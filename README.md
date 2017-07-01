@@ -19,7 +19,7 @@ var app = express();
 app.get("/*", function (req, res) {
 
     adjustHtmlUrl.doAdjust('/static/assets_spa/index.html', {
-        urlPrefix: 'http://www.ubibi.cn',
+        urlPrefix: 'http:/cdn.ubibi.cn',
         useCache: true
     }).then(function (d) {
         res.send(d);
@@ -60,16 +60,16 @@ app.get("/*", function (req, res) {
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=9" />
     <title>Title</title>
-<link href="http://www.ubibi.cn/static/app/client_spa.9dae58ed.css" rel="stylesheet"></head>
+<link href="http:/cdn.ubibi.cn/static/app/client_spa.9dae58ed.css" rel="stylesheet"></head>
 <body>
 
 <div id="mainBody">
     <router-view></router-view>
 </div>
 
-<script src="http://www.ubibi.cn/static/lib/vue-2.3.0/vue.min.js"></script>
-<script src="http://www.ubibi.cn/static/lib/vue-router-2.6.0/dist/vue-router.min.js"></script>
+<script src="http:/cdn.ubibi.cn/static/lib/vue-2.3.0/vue.min.js"></script>
+<script src="http:/cdn.ubibi.cn/static/lib/vue-router-2.6.0/dist/vue-router.min.js"></script>
 
-<script type="text/javascript" src=http://www.ubibi.cn/static/app/client_spa.9dae58ed.js"></script></body>
+<script type="text/javascript" src="http:/cdn.ubibi.cn/static/app/client_spa.9dae58ed.js"></script></body>
 </html>
 ```
