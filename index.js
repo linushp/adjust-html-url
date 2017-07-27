@@ -115,6 +115,15 @@ exports.doAdjust = function (filePath, replaceOptions) {
     });
 };
 
+exports.clearCache = function (filePath) {
+    if (filePath === true) {
+        getFileContentAsync_cache = {};
+    }
+    if (typeof filePath === 'string' && filePath.length > 0) {
+        getFileContentAsync_cache[filePath] = null;
+    }
+};
+
 exports.setRootPath = function (rootPath) {
     _rootPath = rootPath;
 };
